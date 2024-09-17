@@ -372,16 +372,32 @@ a:hover {
 
 
 .gh-img {
-  width: 30px;
-  height: auto;
+  max-width: 430px; /* Tamaño de imagen ajustado */
+  height: auto; /* Mantiene la relación de aspecto */
   margin-right: 10px;
+  border-radius: 8px; /* Opcional: Agrega bordes redondeados */
+  transition: transform 0.3s ease; /* Agrega un efecto de transición para hover */
+  z-index: 1; /* Asegura que la imagen esté en el fondo en comparación con el texto */
+}
+.gh-img:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen al pasar el cursor */
+  z-index: 0; /* Asegura que la imagen esté detrás del texto al agrandarse */
 }
 
 .anchor-content {
+  position: relative; /* Permite usar z-index */
   display: flex;
   justify-content: start;
   align-items: center;
+  gap: 10px; /* Ajusta el espaciado entre la imagen y el texto */
 }
+
+
+.anchor-content p {
+  z-index: 2; /* Asegura que el texto esté encima de la imagen */
+  position: relative; /* Permite usar z-index */
+}
+
 
 .contact-form {
   background-image: url(animated-bg-info2.svg);

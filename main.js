@@ -13,7 +13,7 @@ $(document).ready(function () {
     });
   
     new TypeIt(".typeIt", {
-      strings: ["Welcome to my Portfolio!", "¡Bienvenido a mi Portafolio!"],
+      strings: ["", "¡Bienvenido a mi Portafolio!"],
       speed: 90,
       deleteSpeed: null,
       lifeLike: true,
